@@ -40,21 +40,23 @@ const fun = fetch(url,
 
 function display() {
     var temp = "";
-    fun.then(ele => {
+    var priority;
+    fun.then(data => console.log(data))
+        .then(ele => {
 
-        ele.priority = document.getElementById('prior').innerHTML = `<select name="priority" id="prior">
+            ele.priority = document.getElementById('prior').innerHTML = `<select name="priority" id="prior">
             <option value="Low" name="Low">1</option>
             <option value="Medium" name="Medium">2</option>
             <option value="High" name="High">3</option>
             <option value="Urgent" name="Urgent">4</option>
           </select>`;
-    })
+        })
 }
 
 function distat() {
     var temp = "";
     fun.then(ele => {
-
+        console.log(ele);
         ele.status = document.getElementById('stat').innerHTML = `<select name="status" id="stat">
             <option value="Open" name="Open">2</option>
             <option value="Pending" name="Pending">3</option>

@@ -45,7 +45,8 @@ function appendtable() {
     cell2.innerHTML = document.getElementById("email").value;
     cell3.innerHTML = document.getElementById("phone").value;
     // alert('Succesfully added the new Contact');
-    //add()
+    //add();
+    list();
     clear();
 }
 
@@ -74,10 +75,11 @@ function add() {
             "Content-Type": "application/json",
 
             headers: {
-                "Content - Type": text / html,
-                "charset": "UTF - 8",
-                "Content - Type": "multipart / form - data",
-                "boundary": "something",
+                "Content-Type": "application/json",
+                // "Content - Type": text / html,
+                // "charset": "UTF - 8",
+                // "Content - Type": "multipart / form - data",
+                // "boundary": "something",
                 'X-Content-Type-Options': 'nosniff',
                 'Authorization': 'Basic ' + btoa(username)
             }
@@ -87,6 +89,7 @@ function add() {
             console.log(res);
             console.log(data)
         })
+    appendtable();
     list();
     clear();
 }
