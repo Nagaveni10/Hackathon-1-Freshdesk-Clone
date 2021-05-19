@@ -1,0 +1,135 @@
+    /*@media screen (max-width:1200px) {
+    html {}
+}*/
+    
+    body {
+        margin: 50px 10px 50px 10px;
+        background-color: rgb(243, 239, 239);
+    }
+    
+    .container {
+        padding: 5px;
+    }
+    
+    ul {
+        margin-top: 40px;
+        list-style: none;
+        padding: 0px;
+    }
+    
+    ul>li {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .sidemenu {
+        font-size: 3em;
+        font-family: sans-serif;
+        text-decoration: none;
+        color: white;
+        list-style-type: none;
+        /*position: absolute;*/
+    }
+    
+    section {
+        margin: 10px;
+        padding: 10px;
+        line-height: 2em;
+    }
+    
+    .filter {
+        display: flex;
+        align-items: flex-end;
+        font-size: 2em;
+        /* border: 1px solid black; */
+        /* position: absolute; */
+    }
+    
+    .fa {
+        border-radius: 5px;
+        align-items: center;
+    }
+    
+    table {
+        font-family: arial, sans-serif;
+        font-size: large;
+        width: 100%;
+        height: 100%;
+    }
+    
+    td,
+    th {
+        border: 1px solid #d3d2d2;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    
+    .person {
+        display: flex;
+        align-items: flex-end;
+        font-size: 2em;
+        border: 1px solid black;
+        position: absolute;
+    }
+    /* table {
+            /* border-collapse: collapse;
+        
+        border-style: hidden;
+        border: "1";
+        background-color: rgb(138, 187, 190);
+        /*table-layout: inherit;
+        
+        width: 5em;
+    }
+    */
+    
+    .newadd {
+        font-size: 2em;
+        color: rgb(194, 26, 40);
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .col-2 {
+        height: 150vh;
+        overflow-wrap: break-word;
+        /*   position: fixed;*/
+    }
+    /*.col-10 {
+        margin-left: 350px;
+    }*/
+    
+    .col-7 {
+        overflow-wrap: break-word;
+    }
+    
+    .col-3 {
+        /* margin: 100px;*/
+        position: static;
+        background-color: rgb(173, 156, 156);
+        text-align: center;
+        font-family: arial, sans-serif;
+        font-size: 0.9em;
+        overflow-wrap: break-word;
+        display: block;
+    }
+    
+    input {
+        background: rgb(196, 199, 160);
+    }
+    
+    #submit {
+        /*display: flex;
+transform: translate(-50%, 50%);*/
+        text-align: center;
+        /*background: rgb(138, 187, 190);*/
+    }
+    
+    form {
+        line-height: 2em;
+        /*background: rgb(213, 241, 159);*/
+        position: static;
+    }
