@@ -4,7 +4,7 @@ const username = ['ZcVbEwsby5MDSnD4xleQ'];
 
 
 
-fetch(url,
+const fun = fetch(url,
 
         {
             method: 'GET',
@@ -23,9 +23,14 @@ fetch(url,
                 temp += "<td>" + ele.subject + "</td>";
                 temp += "<td>" + ele.created_at + "</td>";
                 temp += "<td>" + ele.due_by + "</td>";
-                temp += "<td>" + ele.priority + `<input type="button"`
+                temp += "<td>" + `<select name="priority" id="prior" onclick=${display()} >
+                <option value="Default">${ele.priority}</option>
+                </select>`
                 "</td>";
-                temp += "<td>" + ele.status + /*distat()*/ "</td></tr>";
+                temp += "<td>" + `<select name="status" id="stat" onclick=${distat()} >
+                <option value="Default">${ele.status}</option>
+                </select>`
+                "</td></tr>";
 
             })
             document.getElementById("data").innerHTML = temp;
@@ -33,11 +38,31 @@ fetch(url,
     });
 
 
-// function display(){
-//     document.createElement('div');
-//     div.append()
-// }
+function display() {
+    var temp = "";
+    fun.then(ele => {
 
+        ele.priority = document.getElementById('prior').innerHTML = `<select name="priority" id="prior">
+            <option value="Low" name="Low">1</option>
+            <option value="Medium" name="Medium">2</option>
+            <option value="High" name="High">3</option>
+            <option value="Urgent" name="Urgent">4</option>
+          </select>`;
+    })
+}
+
+function distat() {
+    var temp = "";
+    fun.then(ele => {
+
+        ele.status = document.getElementById('stat').innerHTML = `<select name="status" id="stat">
+            <option value="Open" name="Open">2</option>
+            <option value="Pending" name="Pending">3</option>
+            <option value="Resolved" name="Resolved">4</option>
+            <option value="Closed" name="Closed">5</option>
+          </select>`;
+    })
+}
 // <
 // select >
 //     option value = 'default' > 1 < /option> <

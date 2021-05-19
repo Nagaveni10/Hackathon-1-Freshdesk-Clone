@@ -34,27 +34,29 @@ function list() {
 }
 
 
-// function appendtable() {
-//     var tab = document.getElementById("data");
-//     var row = tab.insertRow();
-//     var cell1 = row.insertCell();
-//     var cell2 = row.insertCell();
-//     var cell3 = row.insertCell();
+function appendtable() {
+    var tab = document.getElementById("data");
+    var row = tab.insertRow();
+    var cell1 = row.insertCell();
+    var cell2 = row.insertCell();
+    var cell3 = row.insertCell();
 
-//     cell1.innerHTML = document.getElementById("name").value;
-//     cell2.innerHTML = document.getElementById("email").value;
-//     cell3.innerHTML = document.getElementById("phone").value;
-//     // alert('Succesfully added the new Contact');
-//     add()
-
+    cell1.innerHTML = document.getElementById("name").value;
+    cell2.innerHTML = document.getElementById("email").value;
+    cell3.innerHTML = document.getElementById("phone").value;
+    // alert('Succesfully added the new Contact');
+    //add()
+    clear();
+}
 
 function clear() {
+    //add();
     document.getElementById("name").value = "";
     document.getElementById("email").value = "";
     document.getElementById("phone").value = "";
 }
 
-function appendtable() {
+function add() {
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let phone = document.getElementById("phone").value;
@@ -66,7 +68,6 @@ function appendtable() {
 
     const url = 'https://nagaveni.freshdesk.com/api/v2/contacts';
     const username = ['ZcVbEwsby5MDSnD4xleQ'];
-    //const url = 'https://file:///C:/Users/sunil/Desktop/B231WD/FreshDesk-tickets/contacts.html'
     fetch(url, {
             method: 'POST',
             body: JSON.stringify(user),
